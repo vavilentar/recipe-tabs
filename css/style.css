@@ -1,0 +1,379 @@
+:root {
+--red-primary: #4ceb54;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul,
+ol,
+li {
+	list-style: none;
+}
+
+html,
+body {
+	height: 100%;
+	font-family: 'Raleway';
+}
+
+[class*="__container"] {
+	max-width: 1070px;
+	margin: 0 auto;
+}
+
+.title-add {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.add-recipe-btn{
+	cursor: pointer;
+	height: 44px;
+	width: 200px;
+	background: var(--red-primary);
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 22px;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	transition: all .3s;
+}
+.title {
+	text-align: center;
+	font-size: 30px;
+	text-transform: uppercase;
+	padding: 30px 0;
+}
+
+.catalog__tabs {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-bottom: 0;
+	padding-left: 0;
+}
+
+.catalog__tab {
+	height: 50px;
+	width: 220px;
+	border: 2px solid #d0d0d0;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 18px;
+	font-weight: 500;
+	line-height: 48px;
+	transform: skewX(-25deg);
+	margin: 0 5px;
+	cursor: pointer;
+	transition: .3s;
+}
+
+.catalog__tab:hover {
+	-webkit-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+	-moz-box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+	box-shadow: 5px 5px 5px -5px rgba(34, 60, 80, 0.6);
+	background-color:#d7ffd4;
+}
+
+
+.catalog__tab div {
+	transform: skewX(25deg);
+}
+
+.catalog__tab.active {
+	background-color: var(--red-primary);
+	color: white;
+	border: none;
+	
+}
+
+.catalog__content {
+	margin-top: 60px;
+	display: none;
+	justify-content: space-between;
+	flex-wrap: wrap;
+}
+
+.catalog__content.active {
+	display: flex;
+}
+
+
+
+.catalog-item {
+	width: 300px;
+	min-height: 440px;
+	border: 2px solid #e8e8e8;
+	padding: 20px 20px 26px 20px;
+	overflow: hidden;
+	margin-bottom: 20px;
+}
+
+.catalog-item hr {
+	background-color: #e8e8e8;
+	margin-top: 19px;
+	margin-bottom: 21px;
+
+	border-bottom: none;
+}
+
+.catalog-item__img {
+	display: block;
+	margin: 0 auto;
+	max-width: 100%;
+	height: 300px;
+}
+
+.catalog-item__subtitle {
+	text-align: center;
+	margin-top: 12px;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 25px;
+}
+
+.catalog-item__descr {
+	text-align: center;
+	font-size: 14px;
+	font-weight: 400;
+	line-height: 22px;
+}
+
+.catalog-item__link {
+	margin-top: 10px;
+	display: block;
+	text-align: center;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 14px;
+	color: var(--red-primary)
+}
+
+.catalog-item__footer {
+	align-items: center;
+	display: flex;
+	justify-content: space-between;
+}
+
+.catalog-item__btn {
+	cursor: pointer;
+	height: 44px;
+	width: 135px;
+	background: var(--red-primary);
+	color: white;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 22px;
+	border: none;
+	border-radius: 5px;
+	font-family: 'Raleway';
+	text-transform: uppercase;
+	transition: all .3s;
+}
+
+.catalog-item__btn:hover {
+	background-color:#8bff8b;
+	color: black;
+}
+
+.catalog-item__old-price {
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 20px;
+	color: #242424;
+}
+
+.catalog-item__price {
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 20px;
+}
+
+.catalog-item__wrapper {
+	display: flex;
+	width: calc(200% + 40px);
+}
+
+.catalog-item__content {
+	width: 50%;
+	margin-right: 0px;
+	transform: translateX(-100%);
+	transition: all .3s;
+	
+
+}
+
+.catalog-item__content.active {
+	transform: translateX(0%);
+	margin-right: 20px;
+	
+}
+
+.catalog-item__list {
+	position: relative;
+	width: 50%;
+	margin-left: 0px;
+	transform: translateX(0%);
+	transition: all .3s;
+	margin-bottom: 0;
+	
+}
+
+.catalog-item__list li {
+	position: relative;
+	margin-bottom: 20px;
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 21px;
+}
+
+.catalog-item__list li::before {
+	content: '';
+	position: absolute;
+	width: 5px;
+	height: 5px;
+	background-color: var(--red-primary);
+	left: -14px;
+	top: 7px;
+}
+
+.catalog-item__list.active {
+	transform: translateX(-100%);
+	margin-left: 20px;
+}
+
+.catalog-item__back {
+	position: absolute;
+	bottom: 0;
+	left: 55%;
+	transform: translateX(calc(-50% - 19px));
+	display: block;
+	color: var(--red-primary);
+	font-size: 14px;
+	font-weight: 500;
+	text-transform: uppercase;
+}
+
+
+.overlay {
+	display: none;
+	top: 0;
+	left: 0;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	min-height: 515px;
+	width: 800px;
+	text-align: center;
+	align-items: center;
+	display: flex;
+	flex-direction: column;
+	background-color: #dadada;
+	border-radius: 5px;
+}
+
+.modal__subtitle {
+	text-transform: uppercase;
+	font-size: 19px;
+	font-weight: 700;
+	line-height: 19px;
+	padding: 35px 0 0 0;
+}
+
+.modal__descr {
+	text-transform: uppercase;
+	font-size: 14px;
+	font-weight: 700;
+	line-height: 14px;
+	padding: 10px 0 26px 0;
+}
+
+
+.feed-form input {
+	margin: 10px 0;
+	height: 53px;
+	width: 251px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 66px;
+	border-radius: 5px;
+	border: none;
+	padding-left: 21px;
+}
+
+.feed-form textarea {
+	margin: 10px 0;
+	border: none;
+	font-size: 14px;
+	font-weight: 500;
+	border-radius: 5px;
+}
+
+.input-comment input {
+	height: 200px;
+}
+
+.modal-leftside form{
+	display: flex;
+	flex-direction: column;
+}
+
+.modal-rightside form{
+	display: flex;
+	flex-direction: column;
+}
+
+.modal button {
+	text-transform: uppercase;
+	font-family: 'Raleway';
+	height: 48px;
+	width: 125px;
+	background-color: var(--red-primary);
+	color: white;
+	font-size: 16px;
+	font-weight: 500;
+	line-height: 16px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	margin-top: 12px;
+	transition: all .3s;
+}
+
+.feed-form button:hover {
+	background-color:#8fff8b;
+	color: black;
+}
+
+.modal__close {
+	position: absolute;
+	top: -5px;
+	right: 10px;
+	font-size: 41px;
+	line-height: 41px;
+	color:var(--red-primary);
+	cursor: pointer;
+}
+
+#add-recipe {
+	display: none;
+}
+
+.modal-sides {
+	display: flex;
+	justify-content: space-around;
+}

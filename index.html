@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="/css/style.css">
+	<link rel="shortcut icon" href="./icons/bee.png" type="image/png">
+	<title>Tabs</title>
+</head>
+
+<body>
+
+	<main class="main">
+		<section class="catalog__container">
+			<div class="container">
+				<div class="title-add">
+					<h2 class="title">Рецепты</h2>
+					<button class="add-recipe-btn">Добавить рецепт</button>
+				</div>
+				<ul class="catalog__tabs">
+					<li class="catalog__tab active">
+						<div>Наши рецепты</div>
+					</li>
+					<li class="catalog__tab">
+						<div>Подбор рецепта</div>
+					</li>
+					<li class="catalog__tab your-recipe-tab">
+						<div>Твои рецепты
+						</div>
+					</li>
+
+				</ul>
+
+				<div class="catalog__content active">
+					<div class="catalog-item">
+						<div class="catalog-item__wrapper">
+							<div class="catalog-item__content active">
+								<img src="./img/pulsometr.png" alt="" class="catalog-item__img">
+								<div class="catalog-item__subtitle">Пульсометр Polar FT1</div>
+								<div class="catalog-item__descr">Для первых шагов в тренировках, основанных на
+									сердечном ритме</div>
+								<a href="#" class="catalog-item__link">ПОДРОБНЕЕ</a>
+							</div>
+							<div class="catalog-item__list">
+								Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea odio earum sed magnam aspernatur excepturi tempora doloribus nemo numquam, cupiditate perspiciatis eos illum sit. Fugiat et tenetur fugit vel quisquam!
+								Quae possimus, numquam, deleniti dolor accusantium nostrum quam harum ut quisquam officiis quas atque vero id voluptates doloremque. Doloribus nobis aspernatur obcaecati corrupti molestiae, reiciendis dolor quae? Ab, sint at.
+								<a href="#" class="catalog-item__back">Назад</a>
+							</div>
+						</div>
+						<hr>
+
+						<div class="catalog-item__footer">
+							<div class="catalog-item__prices">
+								<div class="catalog-item__old-price">4 750 руб.</div>
+								<div class="catalog-item__price">4 500 руб.</div>
+							</div>
+							<button class="catalog-item__btn">КУПИТЬ</button>
+						</div>
+					</div>
+				</div>
+				<div class="catalog__content">
+					Здесь ничего нет"
+				</div>
+				<div id="your-recipes" class="catalog__content your-recipes"></div>
+		</section>
+	</main>
+	<footer>
+
+	</footer>
+
+	<div class="overlay">
+		<div class="modal active" id="add-recipe">
+			<div class="modal__close">
+				&times;
+			</div>
+			<div class="modal-sides">
+				<div class="modal-leftside">
+					<div class="modal__subtitle">Ваш рецепт:</div>
+					<!-- <div class="modal__descr">и мы перезвоним Вам в течении 10 минут</div> -->
+					<form class="feed-form" action="#">
+						<input class="input-name" name="name" required id="first" type="text"
+							placeholder="Название рецепта">
+						<input class="input-descr" name="descr" required id="first" type="text"
+							placeholder="Краткое описание" maxlength="90">
+						<input class="input-link" name="photo-link" required id="first" type="text"
+							placeholder="Ссылка на фото">
+						<input class="input-persons" name="persons" required id="first" type="text"
+							placeholder="Количество персон">
+						<input class="input-time-spend" name="time-spend" required id="first" type="text"
+							placeholder="Потребуется времени">
+
+
+					</form>
+				</div>
+				<div class="modal-rightside">
+					<div class="modal__subtitle">Ваш рецепт:</div>
+					<form class="feed-form">
+						<!-- <input class="input-comment" name="comment" required id="first" type="textarea"
+							placeholder="Рецепт"> -->
+							<textarea class="comment-area" name="comment" id="1" cols="30" rows="10"></textarea>
+				</div>
+				</form>
+			</div>
+			<button class="button button_submit">Добавить</button>
+		</div>
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="./js/script.js"></script>
+</body>
+
+</html>
